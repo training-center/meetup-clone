@@ -1,51 +1,41 @@
-# Workflow ReactJS
+# Meetup Clone
 
-## What's inside it?
+Com o propósito de cortar custos referente ao aplicativo Meetup.com, nos juntamos para a criação de um novo aplicativo que ofereça os mesmos serviços, porém gratuitos!
 
-* Webpack 3+
-* Babel
-* React hot loader
-* HTML and CSS generated automatically by webpack
-* Jest for tests and Chai for assertions
-* Storybook to create isolatelly components' stories
-* Async/await
-* Dynamic `import()` function
-* Webpack tree shaking!
-* [Preact](https://preactjs.com/) for production build (optional)
+Continuaremos a fazer mais encontros no formato de Hackathon para continuar evoluindo o app, mas você também pode colaborar mesmo de longe, siga as instruções para partiipar:
 
-## Dependencies:
+## Dependências:
 
 - Node.js `>=` v6;
 
-## Up and running
+## Executando
 
-- Clone this repository: `git clone git@github.com:fdaciuk/workflow-reactjs.git`;
-- Remove `.git` directory;
-- Install dependencies: `yarn` (or `npm i`);
-- Run `yarn dev` (or `npm start`) to develop on `http://localhost:3000`
-- Run `yarn build` (or `npm run build`) for production build (files will be generated on `dist` directory)
+- Clone este repositório: `git clone git@github.com:training-center/meetup-clone.git`;
+- Instale as dependências: `yarn` (ou `npm i`);
+- Execute `yarn dev` (ou `npm start`) para iniciar a aplicação em modo de desenvolvimento
+  - Abra o seu browser em: `http://localhost:3000` para visualizar a aplicação em funcionamento
+  - Neste ponto você pode começar a desenvolver e ao salvar as alterações já estarão visível no browser
+- Execute `yarn build` (or `npm run build`) para fazer o build da aplicação (os arquivos gerados vão para a pasta `dist`)
 
-## Troubleshooting
+## Observações
 
-If you are on Windows, and try to run `yarn lint`, you'll get an error
-because `spawn` module does not work very well on Windows.
+Se você estiver no Windows, e tentar executar `yarn lint`, você receberá um erro porque o módulo `spawn` não funciona muito bem no Windows.
 
-You should install `cross-spawn`, and edit `gulpfile.js`, removing line `4` and
-uncomment line `7`.
+Você deve instalar `cross-spawn` (`npm install cross-spawn`) e editar o arquivo `gulpfile.js`: remova a linha `4` e descomente a linha `7`.
 
-A big thanks to [@hgtpcastro](https://github.com/hgtpcastro) for this tip.
+Muito obrigado ao [@hgtpcastro](https://github.com/hgtpcastro) por esta dica.
 
 ## Scripts
 
-- `yarn dev (or npm run dev)`: Starts the application on development mode
-- `yarn test (or npm test)`: Run tests once
-- `yarn test:watch (or npm run test:watch)`: Run tests in watch mode
-- `yarn build (or npm run build)`: Build project to production
-- `yarn build:analyzer (or npm run build:analyzer)`: Build project to production and open bundle analyzer on `8888` port
-- `yarn storybook (or npm run storybook)`: Run Storybook on `6006` port
-- `yarn storybook:build`: Build Storybook to static files
-- `yarn update-packages`: Update all packages to the latest version
-- `yarn start (or npm start)`: Special script reserved to run production code. Change as you wish. For now, it is the same as `yarn dev`.
+- `yarn dev (or npm run dev)`: Inicia a aplicaço em modo de desenvolvimento
+- `yarn test (or npm test)`: Executa os testes
+- `yarn test:watch (or npm run test:watch)`: Executa os teste em modo *watch*
+- `yarn build (or npm run build)`: Faz o *build* do projeto para produção
+- `yarn build:analyzer (or npm run build:analyzer)`: Faz o *build* do projeto para produção e abre o bundle analyzer na porta `8888`
+- `yarn storybook (or npm run storybook)`: Executa o Storybook na porta `6006`
+- `yarn storybook:build`: Faz o build dos arquivos de Storybook
+- `yarn update-packages`: Atualiza todas as dependências para a última versão
+- `yarn start (or npm start)`: Script especial reservado para executar o aplicativo em produção.
 
 ## License
 
