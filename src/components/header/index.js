@@ -51,5 +51,4 @@ const Button = styled(Link)`
   text-transform: uppercase;
 `
 
-
 export default Header
