@@ -1,8 +1,7 @@
-'use strict'
-
 import React from 'react'
 import t from 'prop-types'
 import styled from 'styled-components'
+import formatDate from '../../utils/formatDate'
 
 const Infos = ({ date, address }) => (
   <InfosBox>
@@ -11,9 +10,10 @@ const Infos = ({ date, address }) => (
   </InfosBox>
 )
 
-const Icon = styled.span`
-  margin-right: 10px;
-`
+Infos.propTypes = {
+  address: t.string.isRequired,
+  date: t.number.isRequired
+}
 
 const InfosBox = styled.aside`
   background-color: white;
@@ -22,17 +22,8 @@ const InfosBox = styled.aside`
   max-width: 20rem;
   border-radius: 10%;
   > div {
-    margin-bottom: 1rem;    
+    margin-bottom: 1rem;
   }
 `
-
-const formatDate = (timestamp) => {
-  const date = new Date(timestamp)
-  const day = date.getDate()
-  const month = date.getMonth() + 1
-  const year = date.getFullYear()
-
-  return `${day}/${month}/${year}`
-}
 
 export default Infos

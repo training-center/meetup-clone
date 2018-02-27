@@ -1,10 +1,9 @@
-'use strict'
-
 import React from 'react'
 import t from 'prop-types'
 import styled from 'styled-components'
 import Infos from './infos'
-const EventDescription = ({ title, description, date, canEdit, className, address }) => (
+
+const EventDescription = ({ title, description, date, address }) => (
   <Container>
     <Header>
       <EventTitle>{title}</EventTitle>
@@ -15,13 +14,20 @@ const EventDescription = ({ title, description, date, canEdit, className, addres
     </Header>
     <Content>
       <div>
-        <h4>Detalhes</h4>        
+        <h4>Detalhes</h4>
         <p>{description}</p>
       </div>
       <Infos date={date} address={address} />
     </Content>
   </Container>
 )
+
+EventDescription.propTypes = {
+  address: t.string.isRequired,
+  date: t.string.isRequired,
+  description: t.string.isRequired,
+  title: t.string.isRequired
+}
 
 const Container = styled.div`
   background-color: #f6f7f8;
@@ -63,7 +69,7 @@ const Button = styled.button`
 `
 
 const EventTitle = styled.h2`
-  margin : 0;
+  margin: 0;
 `
 
-export default EventDescription 
+export default EventDescription
