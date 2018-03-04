@@ -1,7 +1,6 @@
 import React from 'react'
 import EventsList from 'components/events-list'
 
-
 const Profile = () => (
   <div>
     <h2>Meus Eventos Confirmados</h2>

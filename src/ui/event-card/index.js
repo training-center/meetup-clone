@@ -3,7 +3,7 @@
 import React from 'react'
 import t from 'prop-types'
 import styled from 'styled-components'
-import formatDate from '../../utils/formatDate'
+import FormattedDate from '@ui/formatted-date'
 
 const EventCard = ({ confirmed, canceled, title, description, link, date, image, canEdit, className }) => (
   <Container canceled={canceled} className={className}>
@@ -13,7 +13,7 @@ const EventCard = ({ confirmed, canceled, title, description, link, date, image,
       <Content>
         <EventTitle>{title}</EventTitle>
         <EventDescription>{description}</EventDescription>
-        <div>{formatDate(date)}</div>
+        <div><FormattedDate timestamp={date} /></div>
       </Content>
     </EventInfo>
 

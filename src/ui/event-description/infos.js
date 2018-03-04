@@ -1,11 +1,11 @@
 import React from 'react'
 import t from 'prop-types'
 import styled from 'styled-components'
-import formatDate from '../../utils/formatDate'
+import FormattedDate from '@ui/formatted-date'
 
 const Infos = ({ date, address }) => (
   <InfosBox>
-    <div>{formatDate(date)}</div>
+    <div><FormattedDate timestamp={date} /></div>
     <p>{address}</p>
   </InfosBox>
 )
