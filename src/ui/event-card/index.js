@@ -3,6 +3,7 @@
 import React from 'react'
 import t from 'prop-types'
 import styled from 'styled-components'
+import FormattedDate from '@ui/formatted-date'
 
 const EventCard = ({ confirmed, canceled, title, description, link, date, image, canEdit, className }) => (
   <Container canceled={canceled} className={className}>
@@ -12,7 +13,7 @@ const EventCard = ({ confirmed, canceled, title, description, link, date, image,
       <Content>
         <EventTitle>{title}</EventTitle>
         <EventDescription>{description}</EventDescription>
-        <div>{formatDate(date)}</div>
+        <div><FormattedDate timestamp={date} /></div>
       </Content>
     </EventInfo>
 
@@ -31,15 +32,6 @@ EventCard.propTypes = {
   date: t.number.isRequired
 }
 
-const formatDate = (timestamp) => {
-  const date = new Date(timestamp)
-  const day = date.getDate()
-  const month = date.getMonth() + 1
-  const year = date.getFullYear()
-
-  return `${day}/${month}/${year}`
-}
-
 const Container = styled.div`
   align-items: center;
   display: flex;
@@ -50,6 +42,7 @@ const Container = styled.div`
   position: relative;
   border: 1px solid #000;
 `
+
 const Tag = styled.span`
   background: red;
   color: #fff;
@@ -81,9 +74,11 @@ const Img = styled.img`
   height: 150px;
   width: 150px;
 `
+
 const Content = styled.div`
   padding: 0 10px 10px 10px;
 `
+
 const Button = styled.button`
   border: 0;
   margin: 0;
