@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const EventForm = ({ event }) => (
     <ContainerForm>
-        <h1>Novo Evento</h1>        
+        <h1>Novo Evento</h1>
         <ContainerInput>
             <Label>Categoria</Label>
             <select name="categoriaInput">
                 <option selected value="desenvolvimento">Desenvolvimento</option>
                 <option value="devops">DevOps</option>
             </select>
-        </ContainerInput>                
+        </ContainerInput>
         <ContainerInput>
             <Label>Imagem de capa</Label>
             <input name="imagemCapaInput" type="file" />
@@ -22,10 +23,11 @@ const EventForm = ({ event }) => (
         <ContainerInput>
             <Label>Data de realização</Label>
             <input name="dadtaInput" type="date" />
-        </ContainerInput>        
+        </ContainerInput>
         <Label>Descrição</Label>
-        <textArea name="descricaoTextArea" ></textArea>        
-        <input name="submitButton" type="button" value="Cadastrar Evento" />         
+        <textArea name="descricaoTextArea" ></textArea>
+        <input name="submitButton" type="button" value="Cadastrar Evento" />
+
     </ContainerForm>
 )
 
@@ -41,7 +43,7 @@ const ContainerInput = styled.div`
 `
 
 const Label = styled.label`
-    padding: 0 10px 0 0;    
+    padding: 0 10px 0 0;
 `
 
 export default EventForm
